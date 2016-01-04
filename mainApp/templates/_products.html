@@ -1,0 +1,11 @@
+<div class="row extra-row">
+  {% for product in products %}
+    <div class="image-container col-sm-12 col-lg-6 {{ product.product_type }}">
+      <img src="{{ product.photo_url }}" height="600" width="600">
+    </div>
+    {% if forloop.counter|divisibleby:2 %}
+      </div>
+      <div class="row extra-row">
+    {% endif %}
+  {% endfor %}
+</div>

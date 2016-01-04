@@ -1,0 +1,8 @@
+{
+  "name": "RollerCo",
+  "description": "",
+  "logo": "",
+  "repository": "https://github.com/iaferrer/rollerco-app/tree/master/rollerco",
+  "keywords": ["python", "django" ],
+  "addons": [ "heroku-postgresql" ]
+}

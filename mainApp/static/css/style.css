@@ -1,0 +1,397 @@
+.navbar-header button {
+  margin: 1px 20px;
+  padding: 7px 8px;
+}
+
+button.navbar-toggle {
+  background-color: #333;
+}
+
+.navbar-toggle .icon-bar {
+  background-color: white;
+}
+
+.navbar-toggle:hover .icon-bar{
+  background-color: white;
+}
+
+.navbar-toggle .icon-bar + .icon-bar {
+  margin-top: 3px;
+}
+
+.navbar-collapse.collapse.in {
+  border: none;
+}
+
+.collapsing {
+  border: none;
+}
+
+#top-menu {
+  margin-top: 0;
+  margin-bottom: 0;
+  min-height: 30px;
+  border: none;
+  border-radius: 0;
+  background-color: transparent;
+}
+
+.navbar-top {
+  position: absolute;
+  top: 220px;
+  width: 100%;
+  height: 30px;
+  background-color: white;
+  opacity: 0.5;
+}
+
+#top-menu a {
+  padding-top: 5px;
+  padding-bottom: 5px;
+  color: #333;
+  font-weight: bold;
+}
+
+#top-menu a:hover {
+  background-color: #333;
+  color: white;
+}
+
+#top-menu a.active {
+  background-color: #333;
+  color: white;
+}
+
+#top-menu ul {
+  position: absolute;
+  left: 25%;
+  right: 25%;
+}
+
+#top-menu li {
+  width: 25%;
+}
+
+header.header-image {
+  padding-top: 0;
+  height: 250px;
+}
+
+header .logo-container {
+  position: relative;
+  margin: 30px auto;
+  height: 160px;
+  width: 160px;
+  background-color: white;
+  opacity: 0.5;
+}
+
+header img.header-logo  {
+  position: absolute;
+  z-index: 1040;
+  top: 45px;
+  margin-left: auto;
+  margin-right: auto;
+  left: 0;
+  right: 0;
+  height: 120px;
+}
+
+.content.container {
+  margin: 250px 0px 0px 0px;
+  text-align: center;
+  width: 100%;
+}
+
+.content.container img {
+  max-width: 100%;
+  max-height: 700px;
+}
+
+hr.featurette-divider {
+  margin: 20px 0;
+  border: 2px solid #ccc;
+  margin-right: -15px;
+  margin-left: -15px;
+}
+
+.btn.btn-quote {
+  border-radius: 15px;
+  background-color: #92A2AF;
+  color: white;
+  font-weight: bold;
+}
+
+.btn.btn-quote:hover {
+  border-radius: 15px;
+  background-color: #92A2AF;
+  opacity: 0.8;
+  color: white;
+  font-weight: bold;
+}
+
+.catalogue .row {
+  margin-bottom: 30px;
+}
+
+.catalogue img {
+  max-width: 400px;
+  max-height: 400px;
+}
+
+.catalogue.image-container {
+  position: relative;
+}
+
+.catalogue a h4{
+  color: rgb(50, 50, 50);
+}
+
+.catalogue h4.type {
+  position: absolute;
+  background-color: rgba(255, 255, 255, 0.5);
+  top: 275px;
+  left: 40%;
+  right: 40%;
+  padding: 10px;
+}
+
+footer {
+  background-color: black;
+  margin: 0;
+}
+
+footer .row {
+  max-width: 100%;
+  margin: 0px;
+}
+
+footer p {
+  margin: 5px 0;
+  text-align: center;
+  color: white;
+}
+
+#index-page img {
+  width: 90%;
+  max-height: none;
+}
+
+#about-page img {
+  width: 90%;
+  max-height: none;
+}
+
+#contact-page .contact-container {
+  position: relative;
+  height: 900px;
+}
+
+#contact-page img.back {
+  position: absolute;
+  top: 100px;
+  left: 10%;
+  right: 10%;
+  bottom: 0;
+  z-index: 0;
+  max-height: 800px;
+  max-width: 1000px;
+  width: 1000px;
+  height: 800px;
+}
+
+#contact-page .map-container,
+#contact-page img.map{
+  position: absolute;
+  top: 100px;
+  left: 15%;
+  bottom: 0;
+  z-index: 10;
+  max-height: 800px;
+  width: 250px;
+  height: 800px;
+}
+
+#contact-page .map-container {
+  background-color: white;
+  opacity: 0.5;
+}
+
+#contact-page form {
+  position: absolute;
+  right: 25%;
+  bottom: 20px;
+  width: 450px;
+  z-index: 10;
+}
+
+#contact-page form .input-field,
+#quote-page form .input-field {
+  text-align: left;
+  margin-bottom: 20px;
+}
+
+#contact-page label {
+  color: white;
+  font-weight: bold;
+}
+
+#contact-page input,
+#quote-page input {
+  background-color: #92A2AF;
+  border: none;
+  width: 100%;
+  line-height: 30px;
+}
+
+#contact-page textarea,
+#quote-page textarea {
+  background-color: #92A2AF;
+  border: none;
+  width: 100%;
+  line-height: 30px;
+  height: 130px;
+  resize: none;
+}
+
+#contact-page .btn {
+  width: 25%;
+}
+
+#quote-page .row {
+  margin-bottom: 30px;
+}
+
+#quote-page form {
+  width: 70%;
+  margin: auto;
+  margin-bottom: 60px;
+}
+
+#quote-page label {
+  font-weight: bold;
+}
+
+#quote-page textarea {
+  height: 400px;
+}
+
+#quote-page form .btn {
+  width: 15%;
+}
+
+#quote-page .action-field {
+  text-align: right;
+}
+
+@media (max-width: 767px) {
+  .navbar-collapse {
+    position: absolute;
+    top: 30px;
+    right: 0px;
+    left: 0px;
+    background-color: #333;
+    height: 150px;
+  }
+
+  #top-menu ul {
+    position: absolute;
+    left: 50px;
+    right: 50px;
+  }
+
+  #top-menu li {
+    width: auto;
+    text-align: center;
+  }
+
+  #top-menu li {
+    width: 100%;
+    height: 30px;
+    margin: auto;
+  }
+
+  #top-menu a {
+    width: 100%;
+    color: white;
+    font-weight: none;
+  }
+
+  #top-menu a:hover {
+    opacity: 0.5;
+  }
+
+  #index-page img {
+    padding-top: 60px;
+  }
+
+  .catalogue .image-container {
+    margin-bottom: 30px;
+  }
+
+  .catalogue .row {
+    margin-bottom: 0;
+  }
+
+  #contact-page .contact-container {
+    position: relative;
+    height: 550px;
+  }
+
+  #contact-page img.back {
+    position: absolute;
+    top: 50px;
+    left: 5px;
+    right: 5px;
+    bottom: 0;
+    z-index: 0;
+    max-height: 500px;
+    max-width: 100%;
+    width: 100%;
+    height: 500px;
+  }
+
+  #contact-page .map-container,
+  #contact-page img.map{
+    position: absolute;
+    top: 50px;
+    left: 20px;
+    bottom: 0;
+    z-index: 10;
+    max-height: 500px;
+    width: 100px;
+    height: 500px;
+  }
+
+  #contact-page .map-container {
+    background-color: white;
+    opacity: 0.5;
+  }
+
+  img.map {
+    display: none;
+  }
+
+  #contact-page form {
+    position: absolute;
+    right: 5%;
+    bottom: 20px;
+    width: 50%;
+    z-index: 10;
+    background-color: rgba(0, 0, 0, 0.5);
+    padding: 10px;
+    border-radius: 10px;
+  }
+
+  #contact-page .btn {
+    width: 35%;
+  }
+
+  #quote-page textarea {
+    height: 250px;
+  }
+
+  #quote-page form .btn {
+    width: 25%;
+  }
+}

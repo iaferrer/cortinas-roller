@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html>
+<head>
+  {% load staticfiles %}
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="">
+  <meta name="author" content="">
+
+  <title>Manolo's Page</title>
+
+  <link href="{% static "css/bootstrap.min.css" %}" rel="stylesheet">
+  <link href="{% static "css/one-page-wonder.css" %}" rel="stylesheet">
+  <link href="{% static "css/style.css" %}" rel="stylesheet">
+
+  <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+  <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+  <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+      <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+  <![endif]-->
+
+</head>
+<body>
+  <header class="header-image navbar-fixed-top">
+    <div class="logo-container"></div>
+    <img class="header-logo" src="{% static "imgs/logo.png" %}">
+    <div class="navbar-top"></div>
+    <nav id="top-menu" class="navbar navbar-inverse"  data-page="catalogue" role="navigation">
+      <div class="container">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+              <span class="sr-only">Toggle navigation</span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+          </button>
+        </div>
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+          <ul class="nav navbar-nav">
+            <li><a id="index" href="{% url 'index' %}">Inicio</a></li>
+            <li><a id="about" href="{% url 'about' %}">Quienes somos</a></li>
+            <li><a id="catalogue" href="{% url 'catalogue' %}">Catálogo</a></li>
+            <li><a id="contact" href="{% url 'contact' %}">Contacto</a></li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+  </header>
+      <div id="quote-page" class="content container">
+        <hr class="featurette-divider"/>
+        <button type="button" onclick="location.href={% url 'quote' %};" class="btn btn-default btn-quote">Cotización en línea</button>
+        <hr class="featurette-divider"/>
+        <div class="row">
+          <p>
+            Para solicitar su cotización en línea, por favor, llene el siguiente formulario y especifique
+            los productos y servicios de su interés.
+          </p>
+          <p>
+            Si desea también puede enviarnos su mensaje o solicitud al correo: <strong>contacto@rollerco.cl</strong>
+            o llamarnos directamente a <strong>+56968341044</strong>.
+          </p>
+        </div>
+        <div class="row">
+          <form class="message">
+            <div class="input-field">
+              <label for="name">Nombre:</label><br/>
+              <input id="name" type="text" name="name">
+            </div>
+            <div class="input-field">
+              <label for="email">Correo Electrónico:</label><br/>
+              <input id="email" type="text" name="email"><br/>
+            </div>
+            <div class="input-field">
+              <label for="message">Mensaje:</label><br/>
+              <textarea id="message" type="textarea" name="messages"></textarea><br/>
+            </div>
+            <div class="action-field">
+              <input type="submit" value="Enviar" class="btn btn-default btn-quote">
+            </div>
+          </form>
+        </div>
+      </div>
+      <footer>
+          <div class="row">
+              <div class="col-lg-12">
+                  <p>JORGE HIRMAS 2743, SANTIAGO, RENCA, XIII METROPOLITANA DE SANTIAGO</p>
+              </div>
+          </div>
+      </footer>
+      <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+      <script type="text/javascript" src=" {% static "js/custom.js" %} "></script>
+      <script type="text/javascript" src=" {% static "js/jquery.js" %} "></script>
+      <script type="text/javascript" src=" {% static "js/bootstrap.min.js" %} "></script>
+</body>
+</html>
