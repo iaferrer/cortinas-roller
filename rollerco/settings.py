@@ -78,20 +78,14 @@ except:
 
     DATABASES = {
         'default': {
-            'ENGINE': 'django.db.backends.sqlite3',
-            'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
+            'ENGINE': 'django.db.backends.postgresql_psycopg2',
+            'NAME': 'rollerco_db',
+            'USER': 'admin',
+            'PASSWORD': 'admin',
+            'HOST': '',
+            'PORT': '',
         }
     }
-
-    #    DATABASES = {
-    #    'default': {
-    #        'ENGINE': 'django.db.backends.mysql',
-    #        'NAME': 'info_esuu',
-    #        'USER': 'iaferrer',
-    #        'PASSWORD': 'ignacioferrer',
-    #        'HOST': 'mysql.esuu.org'
-    #    }
-    #}
 
     # Password validation
     # https://docs.djangoproject.com/en/dev/ref/settings/#auth-password-validators
@@ -126,7 +120,7 @@ except:
     # https://docs.djangoproject.com/en/dev/howto/static-files/
 
     STATIC_URL = '/static/'
-    STATIC_ROOT = os.path.dirname(BASE_DIR) + '/public/static/'
+    STATIC_ROOT = '/opt/rollerco/static/'
 
     MEDIA_URL = '/media/'
     MEDIA_ROOT = os.path.dirname(BASE_DIR) + '/public/media/'
