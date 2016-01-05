@@ -78,7 +78,7 @@ except:
 
     DATABASES = {
         'default': {
-            'ENGINE': 'django.db.backends.postgresql_psycopg2',
+            'ENGINE': 'django.db.backends.postgresql',
             'NAME': 'rollerco_db',
             'USER': 'admin',
             'PASSWORD': 'admin',
