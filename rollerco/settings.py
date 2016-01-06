@@ -10,7 +10,7 @@ For the full list of settings and their values, see
 https://docs.djangoproject.com/en/dev/ref/settings/
 """
 try:
-    from settings_local import *
+    from .settings_local import *
 except:
     import os
 
@@ -78,11 +78,11 @@ except:
 
     DATABASES = {
         'default': {
-            'ENGINE': 'django.db.backends.postgresql',
+            'ENGINE': 'django.db.backends.postgresql_psycopg2',
             'NAME': 'rollerco_db',
             'USER': 'admin',
             'PASSWORD': 'admin',
-            'HOST': '',
+            'HOST': 'localhost',
             'PORT': '',
         }
     }
@@ -123,4 +123,4 @@ except:
     STATIC_ROOT = '/opt/rollerco/static/'
 
     MEDIA_URL = '/media/'
-    MEDIA_ROOT = os.path.dirname(BASE_DIR) + '/public/media/'
+    MEDIA_ROOT = '/opt/rollerco/media/'

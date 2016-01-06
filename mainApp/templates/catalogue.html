@@ -8,11 +8,14 @@
   <meta name="description" content="">
   <meta name="author" content="">
 
-  <title>Manolo's Page</title>
+  <title>RollerCo - Cortinas roller</title>
 
   <link href="{% static "css/bootstrap.min.css" %}" rel="stylesheet">
   <link href="{% static "css/one-page-wonder.css" %}" rel="stylesheet">
   <link href="{% static "css/style.css" %}" rel="stylesheet">
+
+  <link rel="shortcut icon" href="{% static "imgs/favicon.ico" %}" type="image/x-icon">
+  <link rel="icon" href="{% static "imgs/favicon.ico" %}" type="image/x-icon">
 
   <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
   <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
@@ -55,7 +58,7 @@
         <div class="row">
           {% for product_type in product_types %}
             <div class="image-container col-sm-12 col-lg-6">
-              <a href="#" data-type="{{ product_type }}">
+              <a href="#" data-type="{{ product_type.safe_name }}">
                 <h4 class="type">{{ product_type }}</h4>
                 <img src="{{ product_type.photo_url }}" height="600" width="600">
               </a>

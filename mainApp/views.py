@@ -27,7 +27,7 @@ def contact(request):
 
 def load_products(request, type):
     response = {'ok': False}
-    cap_type = type.lower().capitalize()
+    cap_type = type.lower().capitalize().replace ("_", " ")
     ans = Product.objects.filter(product_type=cap_type)
     if ans:
         response['first_html'] = render_to_string('_product.html', {'product': ans[0]})
