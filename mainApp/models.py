@@ -10,7 +10,7 @@ class Type(models.Model):
     def __str__(self):
         return mark_safe(self.name.upper())
     def safe_name(self):
-        return mark_safe(self.name.upper().replace (" ", "_"))
+        return self.name.upper().replace(" ", "_")
     def photo_url(self):
         return '/media/' + "/".join(str(self.photo).split('/')[-2:])
 
