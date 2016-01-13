@@ -182,7 +182,7 @@ footer p {
 
 #index-page img,
 #about-page img {
-  width: 50%;
+  width: 65%;
   max-height: none;
 }
 
@@ -258,8 +258,10 @@ footer p {
   resize: none;
 }
 
-#contact-page .btn {
+#contact-page .btn.btn-md,
+#quote-page .btn.btn-md {
   width: 25%;
+  min-width: 70px;
 }
 
 #quote-page .row {
@@ -313,6 +315,10 @@ footer p {
     width: 100%;
     height: 30px;
     margin: auto;
+  }
+
+  .container-fluid>.navbar-collapse, .container-fluid>.navbar-header, .container>.navbar-collapse, .container>.navbar-header {
+    margin: 0;
   }
 
   #top-menu a {
@@ -387,10 +393,6 @@ footer p {
     border-radius: 10px;
   }
 
-  #contact-page .btn {
-    width: 35%;
-  }
-
   #quote-page textarea {
     height: 250px;
   }
@@ -400,7 +402,7 @@ footer p {
   }
 
   .catalogue .row {
-    width: 90%;
+    width: 100%;
     margin-left: auto;
     margin-right: auto;
     margin-bottom: 30px;
