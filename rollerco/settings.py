@@ -124,3 +124,5 @@ except:
 
     MEDIA_URL = '/media/'
     MEDIA_ROOT = '/opt/rollerco/media/'
+
+    EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'

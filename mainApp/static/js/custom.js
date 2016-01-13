@@ -17,9 +17,9 @@ jQuery('document').ready(function(){
     var type = $(this).attr('data-type').toLowerCase();
     var element = this;
     $.ajax({
-      type:"GET",
-      url:"/products/"+ type +"/",
-      dataType: 'json',
+      type: "GET",
+      url: "/products/"+ type +"/",
+      dataType: "json",
       success: function(data){
         if (data['ok']){
           $('.image-container a').not(element).toggle('200');
@@ -37,6 +37,26 @@ jQuery('document').ready(function(){
       error: function(data){
         alert('There was a server error, please try later.');
       }
-	});
+	   });
   });
+
+  $('form.message').on('submit', function(e){
+    e.preventDefault();
+    alert('hola');
+    var token = $(this).children()[0].value;
+    $.ajax({
+      type: "POST",
+      url: "/send_message/",
+      data: {
+        "csrfmiddlewaretoken": token
+      },
+      dataType: "json",
+      success: function(data){
+        alert("hola");
+      },
+      error: function(data){
+        alert("no funciono");
+      }
+    })
+  })
 });

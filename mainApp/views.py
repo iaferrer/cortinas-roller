@@ -4,8 +4,10 @@
 from django.shortcuts import render
 from django.http import HttpResponse
 from mainApp.models import *
+from mainApp.forms import ContactForm
 from django.template.loader import render_to_string
 from django.utils import timezone
+from django.core.mail import send_mail
 import json
 
 def index(request):
@@ -23,7 +25,8 @@ def quote(request):
     return render(request, 'quote.html')
 
 def contact(request):
-    return render(request, 'contact.html')
+    data = {'form': ContactForm()}
+    return render(request, 'contact.html', data)
 
 def load_products(request, type):
     response = {'ok': False}
@@ -34,3 +37,9 @@ def load_products(request, type):
         response['rest_html'] = render_to_string('_products.html', {'products': ans[1:]})
         response['ok'] = True
     return HttpResponse(json.dumps(response))
+
+def send_message(request):
+    response = {'ok': False}
+    send_mail('Subject here', 'Here is the message.', 'ignacio.ferrer92@gmail.com', ['iaferrer@uc.cl'], fail_silently=False)
+    print('Enviado');
+    return HttpResponse(json.dumps(response), content_type="application/json")
