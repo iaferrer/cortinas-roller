@@ -58,7 +58,7 @@
         <div class="row">
           {% for product_type in product_types %}
             <div class="image-container col-sm-12 col-lg-6">
-              <a href="#" data-type="{{ product_type.safe_name }}">
+              <a href="#" data-type="{{ product_type }}">
                 <h4 class="type">{{ product_type }}</h4>
                 <img src="{{ product_type.photo_url }}" height="600" width="600">
               </a>
