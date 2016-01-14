@@ -42,21 +42,32 @@ jQuery('document').ready(function(){
 
   $('form.message').on('submit', function(e){
     e.preventDefault();
-    alert('hola');
-    var token = $(this).children()[0].value;
-    $.ajax({
-      type: "POST",
-      url: "/send_message/",
-      data: {
-        "csrfmiddlewaretoken": token
-      },
-      dataType: "json",
-      success: function(data){
-        alert("hola");
-      },
-      error: function(data){
-        alert("no funciono");
-      }
-    })
+
+    //user_email = 'jbezanilla@alumnos.uai.cl'
+
+    name = $('#name').val();
+    email = $('#email').val();
+    message = $('#message').val();
+
+    if ((name !== '') && (email !== '') && (message !== '')){
+      $.ajax({
+        type: "POST",
+        url: "/send_message/",
+        data: {
+          name: name,
+          email: email,
+          message: message
+        },
+        dataType: "json",
+        success: function(data){
+          alert("Mail Enviado Exitosamente.");
+        },
+        error: function(data){
+          alert("Lo sentimos, hubo un error al enviar el mail.\n Inténtelo más tarde.");
+        }
+      })
+    } else {
+      alert("Porfavor completar todos los campos correctamente.");
+    }
   })
 });
