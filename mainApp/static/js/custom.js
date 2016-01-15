@@ -58,14 +58,21 @@ jQuery('document').ready(function(){
         },
         dataType: "json",
         success: function(data){
-          alert("Mail Enviado Exitosamente.");
+          $("#mail_status p.text-default").text("Mail enviado exitosamente.");
+          $("#mail_status").modal();
+
+          $('#name').val("");
+          $('#email').val("");
+          $('#message').val("");
         },
         error: function(data){
-          alert("Lo sentimos, hubo un error al enviar el mail.\n Inténtelo más tarde.");
+          $("#mail_status p.text-default").text("Lo sentimos, hubo un error al enviar el mail.\n Inténtelo más tarde.");
+          $("#mail_status").modal();
         }
       })
     } else {
-      alert("Porfavor completar todos los campos correctamente.");
+      $("#mail_status p.text-default").text("Porfavor completar todos los campos correctamente.");
+      $("#mail_status").modal();
     }
   })
 });
