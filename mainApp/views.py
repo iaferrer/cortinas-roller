@@ -50,15 +50,14 @@ def send_message(request):
     message = 'From: ' + name + ' <' + email + '>\n\n' + tmp_message
 
     response = {'ok': True}
-    a = requests.post(
-            "https://api.mailgun.net/v3/rollerco.cl/messages",
-            auth = ("api", "key-466488578d0fb8c68531bfd504831629"),
-            data = {
-                "from": "Contact Manager <contact@rollerco.cl>",
-                "to": "ignacio.ferrer92@gmail.com",
-                "subject": subject,
-                "text": message
-                }
-        )
-    print(a);
+    requests.post(
+        "https://api.mailgun.net/v3/rollerco.cl/messages",
+        auth = ("api", "key-466488578d0fb8c68531bfd504831629"),
+        data = {
+            "from": "Contact Manager <contact@rollerco.cl>",
+            "to": "jbezanilla@alumnos.uai.cl",
+            "subject": subject,
+            "text": message
+            }
+    )
     return HttpResponse(json.dumps(response))

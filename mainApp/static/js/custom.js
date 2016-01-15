@@ -43,8 +43,6 @@ jQuery('document').ready(function(){
   $('form.message').on('submit', function(e){
     e.preventDefault();
 
-    //user_email = 'jbezanilla@alumnos.uai.cl'
-
     name = $('#name').val();
     email = $('#email').val();
     message = $('#message').val();
